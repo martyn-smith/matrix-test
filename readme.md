@@ -38,9 +38,9 @@ Rust (release)  4.0s
 Development time
 ---
 
-Python(numpy)  ~3 minutes
-FORTRAN  ~1 minute (yep, actually faster than python)
-Rust  > 3 hours and one forum post for help.
+Python(numpy)  ~3 minutes  
+FORTRAN  ~1 minute (yep, actually faster than python)  
+Rust  > 3 hours and one forum post for help.  
 
 Conclusion
 ---
