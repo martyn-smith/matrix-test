@@ -17,7 +17,7 @@ Initialise a 4096x4096 array with random double precision floats, then obtain th
 Mathematicians, [communicating badly and then acting smug makes you an arse.](https://xkcd.com/169/))
 
 Python 3.8.2 + numpy 1.18.4  
-gfortran 9.3.0 compiled with no flags whatsoever  
+gfortran 9.3.0 compiled with no flags whatsoever, using the intrinsic matmul and naive loops  
 rust 1.43.1 with nalgebra 0.18  
 
 There are minor differences - the FORTRAN array is static whereas the Rust and python versions are dynamically allocated.
@@ -32,7 +32,7 @@ Tested on an i5-8250u processor with 8GB RAM.
 
 Python3 (numpy)  1.3s  
 FORTRAN (matmul) 6.0s  
-FORTRAN (naive)  1200s
+FORTRAN (naive)  1200s  
 Rust (nalgebra, debug)  >60s  
 Rust (nalgebra, release)  4.0s   
 
