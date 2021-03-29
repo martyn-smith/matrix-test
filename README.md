@@ -19,6 +19,7 @@ Mathematicians, [communicating badly and then acting smug makes you an arse.](ht
 Python 3.8.2 + numpy 1.18.4  
 gfortran 9.3.0 compiled with no flags whatsoever, using the intrinsic matmul and naive loops  
 rust 1.43.1 with nalgebra 0.18  
+julia 1.6
 
 There are minor differences - the FORTRAN array is static whereas the Rust and python versions are dynamically allocated.
 I wanted static allocation - but caring about allocation in python is not really "pythonic" (if it's even possible?). In Rust because I gave up after two hours of trying to make static arrays work. They don't, even aside from the const generics issue which makes array traits break if you exceed a length of 32 (side note: oh, boy do I hate that.). I also built the Rust solution both in debug mode and, on a whim, in release mode.
@@ -31,10 +32,11 @@ Results
 Tested on an i5-8250u processor with 8GB RAM.
 
 Python3 (numpy)  1.3s  
-FORTRAN (matmul) 6.0s  
-FORTRAN (naive)  1200s  
+Fortran (matmul) 6.0s  
+Fortran (naive)  1200s  
 Rust (nalgebra, debug)  >60s  
 Rust (nalgebra, release)  4.0s   
+Julia 1.8s
 
 Development time
 ---
@@ -42,6 +44,7 @@ Development time
 Python(numpy)  ~3 minutes  
 FORTRAN  ~1 minute (yep, actually faster than python)  
 Rust  > 3 hours and one forum post for help.  
+Julia ~3 minutes
 
 Conclusion
 ---
